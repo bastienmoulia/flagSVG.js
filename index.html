@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="UTF-8">
+    <title>FlagSVG.js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    	@font-face {
+			font-family: 'Glyphicons';
+			src: url('fonts/glyphicons-regular.eot');
+			src: url('fonts/glyphicons-regular.eot?#iefix') format('embedded-opentype'),
+				url('fonts/glyphicons-regular.woff') format('woff'),
+				url('fonts/glyphicons-regular.ttf') format('truetype'),
+				url('fonts/glyphicons-regular.svg#glyphicons-regular') format('svg');
+			}
+		.glyphicons {
+		  position: relative;
+		  top: 1px;
+		  display: inline-block;
+		  font-family: 'Glyphicons';
+		  font-style: normal;
+		  font-weight: normal;
+		  line-height: 1;
+		  -webkit-font-smoothing: antialiased;
+		  -moz-osx-font-smoothing: grayscale;
+		  margin-right: 5px;
+		}
+		.glyphicons.beer:before { content: "\E275" }
+		.glyphicons.coffee:before { content: "\E295" }
+
+    	#main{
+	    	padding-top: 70px;
+    	}
+    	.navbar-brand{
+	    	cursor: default;
+    	}
+    	pre{
+	    	word-break: normal;
+			word-wrap: normal;
+    	}
+    	.panel-heading{
+	    	padding: 8px 15px 12px;
+    	}
+    	.panel-title {
+			margin-top: 2px;
+		}
+		.none{
+			margin-right: 10px;
+		}
+    	.panel-body div{
+	    	margin-top:5px;
+    	}
+    	.btn{
+	    	outline:none !important;
+    	}
+    	.btn input{
+	    	display: none;
+    	}
+    	.btn>svg{
+	    	float: left;
+	    	margin-left:5px;
+    	}
+    	#form-paypal{
+	    	display: none;
+    	}
+    </style>
+  </head>
+  <body>
+  	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  		<div class="container">
+		  <div class="navbar-header">
+		    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		      <span class="sr-only">Toggle navigation</span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		    </button>
+		    <span class="navbar-brand">FlagSVG.js</span>
+		  </div>
+		  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    <ul class="nav navbar-nav">
+		      <li><a href="#presentation">Presentation</a></li>
+		      <li><a href="#how-to-use-it">How to use it?</a></li>
+		      <li><a href="#help-us">Help us</a></li>
+		      <li><a href="#compilator">Compilator</a></li>
+		      <li><a href="#contact-me">Contact me</a></li>
+		    </ul>
+		  </div>
+  		</div>
+	</nav>
+  	<div class="container" id="main">
+  		<h2 id="presentation">Presentation</h2>
+  		<p>Bla</p>
+  		<p>
+  		<select class="change-exemple">
+			<option value="af">Afghanistan</option>
+			<option value="ax">Åland Islands</option>
+			<option value="al">Albania</option>
+			<option value="dz">Algeria</option>
+			<option value="as">American Samoa</option>
+			<option value="ad">Andorra</option>
+			<option value="ao">Angola</option>
+			<option value="ai">Anguilla</option>
+			<option value="aq">Antarctica</option>
+			<option value="ag">Antigua and Barbuda</option>
+			<option value="ar">Argentina</option>
+			<option value="am">Armenia</option>
+			<option value="aw">Aruba</option>
+			<option value="au">Australia</option>
+			<option value="at">Austria</option>
+			<option value="az">Azerbaijan</option>
+			<option value="bs">Bahamas</option>
+			<option value="bh">Bahrain</option>
+			<option value="bd">Bangladesh</option>
+			<option value="bb">Barbados</option>
+			<option value="by">Belarus</option>
+			<option value="be">Belgium</option>
+			<option value="bz">Belize</option>
+			<option value="bj">Benin</option>
+			<option value="bm">Bermuda</option>
+			<option value="bt">Bhutan</option>
+			<option value="bo">Bolivia, Plurinational State of</option>
+			<option value="bq">Bonaire, Sint Eustatius and Saba</option>
+			<option value="ba">Bosnia and Herzegovina</option>
+			<option value="bw">Botswana</option>
+			<option value="bv">Bouvet Island</option>
+			<option value="br">Brazil</option>
+			<option value="io">British Indian Ocean Territory</option>
+			<option value="bn">Brunei Darussalam</option>
+			<option value="bg">Bulgaria</option>
+			<option value="bf">Burkina Faso</option>
+			<option value="bi">Burundi</option>
+			<option value="kh">Cambodia</option>
+			<option value="cm">Cameroon</option>
+			<option value="ca">Canada</option>
+			<option value="cv">Cape Verde</option>
+			<option value="ky">Cayman Islands</option>
+			<option value="cf">Central African Republic</option>
+			<option value="td">Chad</option>
+			<option value="cl">Chile</option>
+			<option value="cn">China</option>
+			<option value="cx">Christmas Island</option>
+			<option value="cc">Cocos (Keeling) Islands</option>
+			<option value="co">Colombia</option>
+			<option value="km">Comoros</option>
+			<option value="cg">Congo</option>
+			<option value="cd">Congo, the Democratic Republic of the</option>
+			<option value="ck">Cook Islands</option>
+			<option value="cr">Costa Rica</option>
+			<option value="ci">Côte d'Ivoire</option>
+			<option value="hr">Croatia</option>
+			<option value="cu">Cuba</option>
+			<option value="cw">Curaçao</option>
+			<option value="cy">Cyprus</option>
+			<option value="cz">Czech Republic</option>
+			<option value="dk">Denmark</option>
+			<option value="dj">Djibouti</option>
+			<option value="dm">Dominica</option>
+			<option value="do">Dominican Republic</option>
+			<option value="ec">Ecuador</option>
+			<option value="eg">Egypt</option>
+			<option value="sv">El Salvador</option>
+			<option value="gq">Equatorial Guinea</option>
+			<option value="er">Eritrea</option>
+			<option value="ee">Estonia</option>
+			<option value="et">Ethiopia</option>
+			<option value="fk">Falkland Islands (Malvinas)</option>
+			<option value="fo">Faroe Islands</option>
+			<option value="fj">Fiji</option>
+			<option value="fi">Finland</option>
+			<option value="fr">France</option>
+			<option value="gf">French Guiana</option>
+			<option value="pf">French Polynesia</option>
+			<option value="tf">French Southern Territories</option>
+			<option value="ga">Gabon</option>
+			<option value="gm">Gambia</option>
+			<option value="ge">Georgia</option>
+			<option value="de">Germany</option>
+			<option value="gh">Ghana</option>
+			<option value="gi">Gibraltar</option>
+			<option value="gr">Greece</option>
+			<option value="gl">Greenland</option>
+			<option value="gd">Grenada</option>
+			<option value="gp">Guadeloupe</option>
+			<option value="gu">Guam</option>
+			<option value="gt">Guatemala</option>
+			<option value="gg">Guernsey</option>
+			<option value="gn">Guinea</option>
+			<option value="gw">Guinea-Bissau</option>
+			<option value="gy">Guyana</option>
+			<option value="ht">Haiti</option>
+			<option value="hm">Heard Island and McDonald Islands</option>
+			<option value="va">Holy See (Vatican City State)</option>
+			<option value="hn">Honduras</option>
+			<option value="hk">Hong Kong</option>
+			<option value="hu">Hungary</option>
+			<option value="is">Iceland</option>
+			<option value="in">India</option>
+			<option value="id">Indonesia</option>
+			<option value="ir">Iran, Islamic Republic of</option>
+			<option value="iq">Iraq</option>
+			<option value="ie">Ireland</option>
+			<option value="im">Isle of Man</option>
+			<option value="il">Israel</option>
+			<option value="it">Italy</option>
+			<option value="jm">Jamaica</option>
+			<option value="jp">Japan</option>
+			<option value="je">Jersey</option>
+			<option value="jo">Jordan</option>
+			<option value="kz">Kazakhstan</option>
+			<option value="ke">Kenya</option>
+			<option value="ki">Kiribati</option>
+			<option value="kp">Korea, Democratic People's Republic of</option>
+			<option value="kr">Korea, Republic of</option>
+			<option value="kw">Kuwait</option>
+			<option value="kg">Kyrgyzstan</option>
+			<option value="la">Lao People's Democratic Republic</option>
+			<option value="lv">Latvia</option>
+			<option value="lb">Lebanon</option>
+			<option value="ls">Lesotho</option>
+			<option value="lr">Liberia</option>
+			<option value="ly">Libya</option>
+			<option value="li">Liechtenstein</option>
+			<option value="lt">Lithuania</option>
+			<option value="lu">Luxembourg</option>
+			<option value="mo">Macao</option>
+			<option value="mk">Macedonia, the former Yugoslav Republic of</option>
+			<option value="mg">Madagascar</option>
+			<option value="mw">Malawi</option>
+			<option value="my">Malaysia</option>
+			<option value="mv">Maldives</option>
+			<option value="ml">Mali</option>
+			<option value="mt">Malta</option>
+			<option value="mh">Marshall Islands</option>
+			<option value="mq">Martinique</option>
+			<option value="mr">Mauritania</option>
+			<option value="mu">Mauritius</option>
+			<option value="yt">Mayotte</option>
+			<option value="mx">Mexico</option>
+			<option value="fm">Micronesia, Federated States of</option>
+			<option value="md">Moldova, Republic of</option>
+			<option value="mc">Monaco</option>
+			<option value="mn">Mongolia</option>
+			<option value="me">Montenegro</option>
+			<option value="ms">Montserrat</option>
+			<option value="ma">Morocco</option>
+			<option value="mz">Mozambique</option>
+			<option value="mm">Myanmar</option>
+			<option value="na">Namibia</option>
+			<option value="nr">Nauru</option>
+			<option value="np">Nepal</option>
+			<option value="nl">Netherlands</option>
+			<option value="nc">New Caledonia</option>
+			<option value="nz">New Zealand</option>
+			<option value="ni">Nicaragua</option>
+			<option value="ne">Niger</option>
+			<option value="ng">Nigeria</option>
+			<option value="nu">Niue</option>
+			<option value="nf">Norfolk Island</option>
+			<option value="mp">Northern Mariana Islands</option>
+			<option value="no">Norway</option>
+			<option value="om">Oman</option>
+			<option value="pk">Pakistan</option>
+			<option value="pw">Palau</option>
+			<option value="ps">Palestinian Territory, Occupied</option>
+			<option value="pa">Panama</option>
+			<option value="pg">Papua New Guinea</option>
+			<option value="py">Paraguay</option>
+			<option value="pe">Peru</option>
+			<option value="ph">Philippines</option>
+			<option value="pn">Pitcairn</option>
+			<option value="pl">Poland</option>
+			<option value="pt">Portugal</option>
+			<option value="pr">Puerto Rico</option>
+			<option value="qa">Qatar</option>
+			<option value="re">Réunion</option>
+			<option value="ro">Romania</option>
+			<option value="ru">Russian Federation</option>
+			<option value="rw">Rwanda</option>
+			<option value="bl">Saint Barthélemy</option>
+			<option value="sh">Saint Helena, Ascension and Tristan da Cunha</option>
+			<option value="kn">Saint Kitts and Nevis</option>
+			<option value="lc">Saint Lucia</option>
+			<option value="mf">Saint Martin (French part)</option>
+			<option value="pm">Saint Pierre and Miquelon</option>
+			<option value="vc">Saint Vincent and the Grenadines</option>
+			<option value="ws">Samoa</option>
+			<option value="sm">San Marino</option>
+			<option value="st">Sao Tome and Principe</option>
+			<option value="sa">Saudi Arabia</option>
+			<option value="sn">Senegal</option>
+			<option value="rs">Serbia</option>
+			<option value="sc">Seychelles</option>
+			<option value="sl">Sierra Leone</option>
+			<option value="sg">Singapore</option>
+			<option value="sx">Sint Maarten (Dutch part)</option>
+			<option value="sk">Slovakia</option>
+			<option value="si">Slovenia</option>
+			<option value="sb">Solomon Islands</option>
+			<option value="so">Somalia</option>
+			<option value="za">South Africa</option>
+			<option value="gs">South Georgia and the South Sandwich Islands</option>
+			<option value="ss">South Sudan</option>
+			<option value="es">Spain</option>
+			<option value="lk">Sri Lanka</option>
+			<option value="sd">Sudan</option>
+			<option value="sr">Suriname</option>
+			<option value="sj">Svalbard and Jan Mayen</option>
+			<option value="sz">Swaziland</option>
+			<option value="se">Sweden</option>
+			<option value="ch">Switzerland</option>
+			<option value="sy">Syrian Arab Republic</option>
+			<option value="tw">Taiwan, Province of China</option>
+			<option value="tj">Tajikistan</option>
+			<option value="tz">Tanzania, United Republic of</option>
+			<option value="th">Thailand</option>
+			<option value="tl">Timor-Leste</option>
+			<option value="tg">Togo</option>
+			<option value="tk">Tokelau</option>
+			<option value="to">Tonga</option>
+			<option value="tt">Trinidad and Tobago</option>
+			<option value="tn">Tunisia</option>
+			<option value="tr">Turkey</option>
+			<option value="tm">Turkmenistan</option>
+			<option value="tc">Turks and Caicos Islands</option>
+			<option value="tv">Tuvalu</option>
+			<option value="ug">Uganda</option>
+			<option value="ua">Ukraine</option>
+			<option value="ae">United Arab Emirates</option>
+			<option value="gb">United Kingdom</option>
+			<option value="us">United States</option>
+			<option value="um">United States Minor Outlying Islands</option>
+			<option value="uy">Uruguay</option>
+			<option value="uz">Uzbekistan</option>
+			<option value="vu">Vanuatu</option>
+			<option value="ve">Venezuela, Bolivarian Republic of</option>
+			<option value="vn">Viet Nam</option>
+			<option value="vg">Virgin Islands, British</option>
+			<option value="vi">Virgin Islands, U.S.</option>
+			<option value="wf">Wallis and Futuna</option>
+			<option value="eh">Western Sahara</option>
+			<option value="ye">Yemen</option>
+			<option value="zm">Zambia</option>
+			<option value="zw">Zimbabwe</option>
+		</select>
+		<input class="change-exemple" type="radio" name="aspect" value="normal" checked> Normal
+		<input class="change-exemple" type="radio" name="aspect" value="rounded"> Rounded
+  		</p>
+  		<svg class="flag-exemple" data-flag="af" width="400" height="200"></svg>
+  		<h2 id="how-to-use-it">How to use it?</h2>
+  		<p>Download the file containing all the flags, or create your own file with the flags needed.</p>
+  		<a class="btn btn-primary btn-lg" href="flagSVG.js" download="flagSVG.js">Download all flags</a>
+  		<p>Include this code in your page:</p>
+  		<pre class="pre-scrollable">&lt;svg class=&quot;flag&quot; data-flag=&quot;us&quot; width=&quot;400&quot; height=&quot;200&quot;&gt;&lt;/svg&gt;</pre>
+  		<p>Edit the data-flag attribute to specify the flag code.</p>
+  		<pre class="pre-scrollable">&lt;script src=&quot;https://code.jquery.com/jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;flagSVG.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  $(document).ready(function() {
+    flag(&quot;.flag&quot;);
+  });
+&lt;/script&gt;</pre>
+		<p>This code loads the jQuery library and the <b>flagSVG.js</b> file.</p>
+		<p>Once the page is ready, the flag() function is called. Its parameters allow you to choose what will be the class of the svg to load the flags.</p>
+		<h2 id="help-us">Help us</h2>
+		<p>To participate in the development of flagSVG.js you can:</p>
+		<p>Improve flags in SVG format from <a href="https://commons.wikimedia.org" target="_blank">Wikimedia Commons</a>.</p>
+		<p>Modify the code and the algorithm for generating the JS file on GitHub.</p>
+  		<h2 id="compilator">Compilator</h2>
+  		<p>Select the flag you need !</p>
+  		<form role="form" id="form" method="post" action="flagSVG-custom.js">
+  			<div class="panel panel-default">
+			  <div class="panel-heading">
+			  <button class="btn btn-xs pull-right all">Select all</button>
+			  <button class="btn btn-xs pull-right none">Select none</button>
+			    <h3 class="panel-title">Europe</h3>
+			    
+			  </div>
+			  <div class="panel-body row">
+			  
+			  	<div class="col-xs-12 col-sm-6 col-md-4">
+					<button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="al"><svg class="flag" data-flag="al" width="40" height="20"></svg><span>Albania</span></button>
+				</div>
+				
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ad"><svg class="flag" data-flag="ad" width="40" height="20"></svg><span>Andorra</span></button>
+				</div>
+				
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="az"><svg class="flag" data-flag="az" width="40" height="20"></svg><span>Azerbaijan</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="at"><svg class="flag" data-flag="at" width="40" height="20"></svg><span>Austria</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="am"><svg class="flag" data-flag="am" width="40" height="20"></svg><span>Armenia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="be"><svg class="flag" data-flag="be" width="40" height="20"></svg><span>Belgium</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ba"><svg class="flag" data-flag="ba" width="40" height="20"></svg><span>Bosnia and Herzegovina</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="bg"><svg class="flag" data-flag="bg" width="40" height="20"></svg><span>Bulgaria</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="by"><svg class="flag" data-flag="by" width="40" height="20"></svg><span>Belarus</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="hr"><svg class="flag" data-flag="hr" width="40" height="20"></svg><span>Croatia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="cy"><svg class="flag" data-flag="cy" width="40" height="20"></svg><span>Cyprus</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="cz"><svg class="flag" data-flag="cz" width="40" height="20"></svg><span>Czech Republic</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="dk"><svg class="flag" data-flag="dk" width="40" height="20"></svg><span>Denmark</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ee"><svg class="flag" data-flag="ee" width="40" height="20"></svg><span>Estonia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="fo"><svg class="flag" data-flag="fo" width="40" height="20"></svg><span>Faroe Islands</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="fi"><svg class="flag" data-flag="fi" width="40" height="20"></svg><span>Finland</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ax"><svg class="flag" data-flag="ax" width="40" height="20"></svg><span>&Aring;land Islands</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="fr"><svg class="flag" data-flag="fr" width="40" height="20"></svg><span>France</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ge"><svg class="flag" data-flag="ge" width="40" height="20"></svg><span>Georgia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="de"><svg class="flag" data-flag="de" width="40" height="20"></svg><span>Germany</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="gi"><svg class="flag" data-flag="gi" width="40" height="20"></svg><span>Gibraltar</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="gr"><svg class="flag" data-flag="gr" width="40" height="20"></svg><span>Greece</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="va"><svg class="flag" data-flag="va" width="40" height="20"></svg><span>Holy See (Vatican)</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="hu"><svg class="flag" data-flag="hu" width="40" height="20"></svg><span>Hungary</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="is"><svg class="flag" data-flag="is" width="40" height="20"></svg><span>Iceland</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ie"><svg class="flag" data-flag="ie" width="40" height="20"></svg><span>Ireland</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="it"><svg class="flag" data-flag="it" width="40" height="20"></svg><span>Italy</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="kz"><svg class="flag" data-flag="kz" width="40" height="20"></svg><span>Kazakhstan</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="lv"><svg class="flag" data-flag="lv" width="40" height="20"></svg><span>Latvia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="li"><svg class="flag" data-flag="li" width="40" height="20"></svg><span>Liechtenstein</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="lt"><svg class="flag" data-flag="lt" width="40" height="20"></svg><span>Lithuania</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="lu"><svg class="flag" data-flag="lu" width="40" height="20"></svg><span>Luxembourg</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="mt"><svg class="flag" data-flag="mt" width="40" height="20"></svg><span>Malta</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="mc"><svg class="flag" data-flag="mc" width="40" height="20"></svg><span>Monaco</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="md"><svg class="flag" data-flag="md" width="40" height="20"></svg><span>Moldova</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="me"><svg class="flag" data-flag="me" width="40" height="20"></svg><span>Montenegro</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="nl"><svg class="flag" data-flag="nl" width="40" height="20"></svg><span>Netherlands</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="no"><svg class="flag" data-flag="no" width="40" height="20"></svg><span>Norway</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="pl"><svg class="flag" data-flag="pl" width="40" height="20"></svg><span>Poland</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="pt"><svg class="flag" data-flag="pt" width="40" height="20"></svg><span>Portugal</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ro"><svg class="flag" data-flag="ro" width="40" height="20"></svg><span>Romania</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ru"><svg class="flag" data-flag="ru" width="40" height="20"></svg><span>Russian Federation</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="sm"><svg class="flag" data-flag="sm" width="40" height="20"></svg><span>San Marino</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="rs"><svg class="flag" data-flag="rs" width="40" height="20"></svg><span>Serbia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="sk"><svg class="flag" data-flag="sk" width="40" height="20"></svg><span>Slovakia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="si"><svg class="flag" data-flag="si" width="40" height="20"></svg><span>Slovenia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="es"><svg class="flag" data-flag="es" width="40" height="20"></svg><span>Spain</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="sj"><svg class="flag" data-flag="sj" width="40" height="20"></svg><span>Svalbard & Jan Mayen Islands</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="se"><svg class="flag" data-flag="se" width="40" height="20"></svg><span>Sweden</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ch"><svg class="flag" data-flag="ch" width="40" height="20"></svg><span>Switzerland</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="tr"><svg class="flag" data-flag="tr" width="40" height="20"></svg><span>Turkey</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ua"><svg class="flag" data-flag="ua" width="40" height="20"></svg><span>Ukraine</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="mk"><svg class="flag" data-flag="mk" width="40" height="20"></svg><span>Macedonia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="gb"><svg class="flag" data-flag="gb" width="40" height="20"></svg><span>United Kingdom</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="gg"><svg class="flag" data-flag="gg" width="40" height="20"></svg><span>Guernsey</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="je"><svg class="flag" data-flag="je" width="40" height="20"></svg><span>Jersey</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="im"><svg class="flag" data-flag="im" width="40" height="20"></svg><span>Isle of Man</span></button>
+				</div>
+			 </div>
+			</div>
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			  <button class="btn btn-xs pull-right all">Select all</button>
+			  <button class="btn btn-xs pull-right none">Select none</button>
+			    <h3 class="panel-title">North america</h3>
+			  </div>
+			  <div class="panel-body row">
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ag"><svg class="flag" data-flag="ag" width="40" height="20"></svg><span>Antigua and Barbuda</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="bs"><svg class="flag" data-flag="bs" width="40" height="20"></svg><span>Bahamas</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="bb"><svg class="flag" data-flag="bb" width="40" height="20"></svg><span>Barbados</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="bm"><svg class="flag" data-flag="bm" width="40" height="20"></svg><span>Bermuda</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="bz"><svg class="flag" data-flag="bz" width="40" height="20"></svg><span>Belize</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="vg"><svg class="flag" data-flag="vg" width="40" height="20"></svg><span>British Virgin Islands</span></button>
+				</div>
+<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ca"><svg class="flag" data-flag="ca" width="40" height="20"></svg><span>Canada</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ky"><svg class="flag" data-flag="ky" width="40" height="20"></svg><span>Cayman Islands</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="cr"><svg class="flag" data-flag="cr" width="40" height="20"></svg><span>Costa Rica</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="cu"><svg class="flag" data-flag="cu" width="40" height="20"></svg><span>Cuba</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="dm"><svg class="flag" data-flag="dm" width="40" height="20"></svg><span>Dominica</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="do"><svg class="flag" data-flag="do" width="40" height="20"></svg><span>Dominican</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="sv"><svg class="flag" data-flag="sv" width="40" height="20"></svg><span>El Salvador</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="gl"><svg class="flag" data-flag="gl" width="40" height="20"></svg><span>Greenland</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="gd"><svg class="flag" data-flag="gd" width="40" height="20"></svg><span>Grenada</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="gp"><svg class="flag" data-flag="gp" width="40" height="20"></svg><span>Guadeloupe</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="gt"><svg class="flag" data-flag="gt" width="40" height="20"></svg><span>Guatemala</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ht"><svg class="flag" data-flag="ht" width="40" height="20"></svg><span>Haiti</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="hn"><svg class="flag" data-flag="hn" width="40" height="20"></svg><span>Honduras</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="jm"><svg class="flag" data-flag="jm" width="40" height="20"></svg><span>Jamaica</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="mq"><svg class="flag" data-flag="mq" width="40" height="20"></svg><span>Martinique</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="mx"><svg class="flag" data-flag="mx" width="40" height="20"></svg><span>Mexico</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ms"><svg class="flag" data-flag="ms" width="40" height="20"></svg><span>Montserrat</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="an"><svg class="flag" data-flag="an" width="40" height="20"></svg><span>Netherlands Antilles</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="cw"><svg class="flag" data-flag="cw" width="40" height="20"></svg><span>Cura&ccedil;ao</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="aw"><svg class="flag" data-flag="aw" width="40" height="20"></svg><span>Aruba</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="sx"><svg class="flag" data-flag="sx" width="40" height="20"></svg><span>Sint Maarten</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="bq"><svg class="flag" data-flag="bq" width="40" height="20"></svg><span>Bonaire</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ni"><svg class="flag" data-flag="ni" width="40" height="20"></svg><span>Nicaragua</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="um"><svg class="flag" data-flag="um" width="40" height="20"></svg><span>United States Minor Outlying Islands</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="pa"><svg class="flag" data-flag="pa" width="40" height="20"></svg><span>Panama</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="pr"><svg class="flag" data-flag="pr" width="40" height="20"></svg><span>Puerto Rico</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="bl"><svg class="flag" data-flag="bl" width="40" height="20"></svg><span>Saint Barthelemy</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="kn"><svg class="flag" data-flag="kn" width="40" height="20"></svg><span>Saint Kitts and Nevis</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ai"><svg class="flag" data-flag="ai" width="40" height="20"></svg><span>Anguilla</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="lc"><svg class="flag" data-flag="lc" width="40" height="20"></svg><span>Saint Lucia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="mf"><svg class="flag" data-flag="mf" width="40" height="20"></svg><span>Saint Martin</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="pm"><svg class="flag" data-flag="pm" width="40" height="20"></svg><span>Saint Pierre and Miquelon</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="vc"><svg class="flag" data-flag="vc" width="40" height="20"></svg><span>Saint Vincent and the Grenadines</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="tt"><svg class="flag" data-flag="tt" width="40" height="20"></svg><span>Trinidad and Tobago</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="tc"><svg class="flag" data-flag="tc" width="40" height="20"></svg><span>Turks and Caicos Islands</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="us"><svg class="flag" data-flag="us" width="40" height="20"></svg><span>United States of America</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="vi"><svg class="flag" data-flag="vi" width="40" height="20"></svg><span>United States Virgin Islands</span></button>
+				</div>
+			 </div>
+			</div>
+			 <div class="panel panel-default">
+			  <div class="panel-heading">
+			  <button class="btn btn-xs pull-right all">Select all</button>
+			  <button class="btn btn-xs pull-right none">Select none</button>
+			    <h3 class="panel-title">South America</h3>
+			  </div>
+			  <div class="panel-body row">
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ar"><svg class="flag" data-flag="ar" width="40" height="20"></svg><span>Argentina</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="bo"><svg class="flag" data-flag="bo" width="40" height="20"></svg><span>Bolivia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="br"><svg class="flag" data-flag="br" width="40" height="20"></svg><span>Brazil</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="cl"><svg class="flag" data-flag="cl" width="40" height="20"></svg><span>Chile</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="co"><svg class="flag" data-flag="co" width="40" height="20"></svg><span>Colombia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ec"><svg class="flag" data-flag="ec" width="40" height="20"></svg><span>Ecuador</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="gy"><svg class="flag" data-flag="gy" width="40" height="20"></svg><span>Guyana</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="py"><svg class="flag" data-flag="py" width="40" height="20"></svg><span>Paraguay</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="pe"><svg class="flag" data-flag="pe" width="40" height="20"></svg><span>Peru</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="sr"><svg class="flag" data-flag="sr" width="40" height="20"></svg><span>Suriname</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="tt"><svg class="flag" data-flag="tt" width="40" height="20"></svg><span>Trinidad and Tobago</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="uy"><svg class="flag" data-flag="uy" width="40" height="20"></svg><span>Uruguay</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ve"><svg class="flag" data-flag="ve" width="40" height="20"></svg><span>Venezuela</span></button>
+				</div>
+			 </div>
+			</div>
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			  <button class="btn btn-xs pull-right all">Select all</button>
+			  <button class="btn btn-xs pull-right none">Select none</button>
+			    <h3 class="panel-title">Asia</h3>
+			  </div>
+			  <div class="panel-body row">
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="af"><svg class="flag" data-flag="af" width="40" height="20"></svg><span>Afghanistan</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="am"><svg class="flag" data-flag="am" width="40" height="20"></svg><span>Armenia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="az"><svg class="flag" data-flag="az" width="40" height="20"></svg><span>Azerbaijan</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="bh"><svg class="flag" data-flag="bh" width="40" height="20"></svg><span>Bahrain</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="bd"><svg class="flag" data-flag="bd" width="40" height="20"></svg><span>Bangladesh</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="bt"><svg class="flag" data-flag="bt" width="40" height="20"></svg><span>Bhutan</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="bn"><svg class="flag" data-flag="bn" width="40" height="20"></svg><span>Brunei</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="kh"><svg class="flag" data-flag="kh" width="40" height="20"></svg><span>Cambodia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="cn"><svg class="flag" data-flag="cn" width="40" height="20"></svg><span>China</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="cy"><svg class="flag" data-flag="cy" width="40" height="20"></svg><span>Cyprus</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ge"><svg class="flag" data-flag="ge" width="40" height="20"></svg><span>Georgia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="in"><svg class="flag" data-flag="in" width="40" height="20"></svg><span>India</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="id"><svg class="flag" data-flag="id" width="40" height="20"></svg><span>Indonesia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ir"><svg class="flag" data-flag="ir" width="40" height="20"></svg><span>Iran</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="iq"><svg class="flag" data-flag="iq" width="40" height="20"></svg><span>Iraq</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="il"><svg class="flag" data-flag="il" width="40" height="20"></svg><span>Israel</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="jp"><svg class="flag" data-flag="jp" width="40" height="20"></svg><span>Japan</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="jo"><svg class="flag" data-flag="jo" width="40" height="20"></svg><span>Jordan</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="kz"><svg class="flag" data-flag="kz" width="40" height="20"></svg><span>Kazakhstan</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="kp"><svg class="flag" data-flag="kp" width="40" height="20"></svg><span>Korea, North</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="kr"><svg class="flag" data-flag="kr" width="40" height="20"></svg><span>Korea, South</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="kw"><svg class="flag" data-flag="kw" width="40" height="20"></svg><span>Kuwait</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="kg"><svg class="flag" data-flag="kg" width="40" height="20"></svg><span>Kyrgyzstan</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="la"><svg class="flag" data-flag="la" width="40" height="20"></svg><span>Laos</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="lb"><svg class="flag" data-flag="lb" width="40" height="20"></svg><span>Lebanon</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="my"><svg class="flag" data-flag="my" width="40" height="20"></svg><span>Malaysia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="mv"><svg class="flag" data-flag="mv" width="40" height="20"></svg><span>Maldives</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="mn"><svg class="flag" data-flag="mn" width="40" height="20"></svg><span>Mongolia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="mm"><svg class="flag" data-flag="mm" width="40" height="20"></svg><span>Myanmar</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="np"><svg class="flag" data-flag="np" width="40" height="20"></svg><span>Nepal</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="om"><svg class="flag" data-flag="om" width="40" height="20"></svg><span>Oman</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="pk"><svg class="flag" data-flag="pk" width="40" height="20"></svg><span>Pakistan</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ps"><svg class="flag" data-flag="ps" width="40" height="20"></svg><span>Palestine</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ph"><svg class="flag" data-flag="ph" width="40" height="20"></svg><span>Philippines</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="qa"><svg class="flag" data-flag="qa" width="40" height="20"></svg><span>Qatar</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ru"><svg class="flag" data-flag="ru" width="40" height="20"></svg><span>Russia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="sa"><svg class="flag" data-flag="sa" width="40" height="20"></svg><span>Saudi Arabia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="sg"><svg class="flag" data-flag="sg" width="40" height="20"></svg><span>Singapore</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="lk"><svg class="flag" data-flag="lk" width="40" height="20"></svg><span>Sri Lanka</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="sy"><svg class="flag" data-flag="sy" width="40" height="20"></svg><span>Syria</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="tj"><svg class="flag" data-flag="tj" width="40" height="20"></svg><span>Tajikistan</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="th"><svg class="flag" data-flag="th" width="40" height="20"></svg><span>Thailand</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="tl"><svg class="flag" data-flag="tl" width="40" height="20"></svg><span>Timor-Leste</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="tr"><svg class="flag" data-flag="tr" width="40" height="20"></svg><span>Turkey</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ae"><svg class="flag" data-flag="ae" width="40" height="20"></svg><span>United Arab Emirates</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="uz"><svg class="flag" data-flag="uz" width="40" height="20"></svg><span>Uzbekistan</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="vn"><svg class="flag" data-flag="vn" width="40" height="20"></svg><span>Vietnam</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ye"><svg class="flag" data-flag="ye" width="40" height="20"></svg><span>Yemen</span></button>
+				</div>
+			 </div>
+			</div>
+			 <div class="panel panel-default">
+			  <div class="panel-heading">
+			  <button class="btn btn-xs pull-right all">Select all</button>
+			  <button class="btn btn-xs pull-right none">Select none</button>
+			    <h3 class="panel-title">Africa</h3>
+			  </div>
+			  <div class="panel-body row">
+			  	<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="dz"><svg class="flag" data-flag="dz" width="40" height="20"></svg><span>Algeria</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ao"><svg class="flag" data-flag="ao" width="40" height="20"></svg><span>Angola</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="bj"><svg class="flag" data-flag="bj" width="40" height="20"></svg><span>Benin</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="bw"><svg class="flag" data-flag="bw" width="40" height="20"></svg><span>Botswana</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="bf"><svg class="flag" data-flag="bf" width="40" height="20"></svg><span>Burkina Faso</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="bi"><svg class="flag" data-flag="bi" width="40" height="20"></svg><span>Burundi</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="cm"><svg class="flag" data-flag="cm" width="40" height="20"></svg><span>Cameroon</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="cv"><svg class="flag" data-flag="cv" width="40" height="20"></svg><span>Cape Verde</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="cf"><svg class="flag" data-flag="cf" width="40" height="20"></svg><span>Central African Republic</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="td"><svg class="flag" data-flag="td" width="40" height="20"></svg><span>Chad</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="km"><svg class="flag" data-flag="km" width="40" height="20"></svg><span>Comoros</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="cg"><svg class="flag" data-flag="cg" width="40" height="20"></svg><span>Congo</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ci"><svg class="flag" data-flag="ci" width="40" height="20"></svg><span>C&ocirc;te d'Ivoire</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="cd"><svg class="flag" data-flag="cd" width="40" height="20"></svg><span>Democratic Republic of the Congo</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="dj"><svg class="flag" data-flag="dj" width="40" height="20"></svg><span>Djibouti</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="eg"><svg class="flag" data-flag="eg" width="40" height="20"></svg><span>Egypt</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="gq"><svg class="flag" data-flag="gq" width="40" height="20"></svg><span>Equatorial Guinea</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="er"><svg class="flag" data-flag="er" width="40" height="20"></svg><span>Eritrea</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="et"><svg class="flag" data-flag="et" width="40" height="20"></svg><span>Ethiopia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ga"><svg class="flag" data-flag="ga" width="40" height="20"></svg><span>Gabon</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="gm"><svg class="flag" data-flag="gm" width="40" height="20"></svg><span>Gambia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="gh"><svg class="flag" data-flag="gh" width="40" height="20"></svg><span>Ghana</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="gn"><svg class="flag" data-flag="gn" width="40" height="20"></svg><span>Guinea</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="gw"><svg class="flag" data-flag="gw" width="40" height="20"></svg><span>Guinea-Bissau</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ke"><svg class="flag" data-flag="ke" width="40" height="20"></svg><span>Kenya</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ls"><svg class="flag" data-flag="ls" width="40" height="20"></svg><span>Lesotho</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="lr"><svg class="flag" data-flag="lr" width="40" height="20"></svg><span>Liberia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ly"><svg class="flag" data-flag="ly" width="40" height="20"></svg><span>Libya</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="mg"><svg class="flag" data-flag="mg" width="40" height="20"></svg><span>Madagascar</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="mw"><svg class="flag" data-flag="mw" width="40" height="20"></svg><span>Malawi</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ml"><svg class="flag" data-flag="ml" width="40" height="20"></svg><span>Mali</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="mr"><svg class="flag" data-flag="mr" width="40" height="20"></svg><span>Mauritania</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="mu"><svg class="flag" data-flag="mu" width="40" height="20"></svg><span>Mauritius</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ma"><svg class="flag" data-flag="ma" width="40" height="20"></svg><span>Morocco</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="mz"><svg class="flag" data-flag="mz" width="40" height="20"></svg><span>Mozambique</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="na"><svg class="flag" data-flag="na" width="40" height="20"></svg><span>Namibia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ne"><svg class="flag" data-flag="ne" width="40" height="20"></svg><span>Niger</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ng"><svg class="flag" data-flag="ng" width="40" height="20"></svg><span>Nigeria</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="rw"><svg class="flag" data-flag="rw" width="40" height="20"></svg><span>Rwanda</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="st"><svg class="flag" data-flag="st" width="40" height="20"></svg><span>S&atilde;o Tom&eacute; and Pr&iacute;ncipe</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="sn"><svg class="flag" data-flag="sn" width="40" height="20"></svg><span>Senegal</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="sc"><svg class="flag" data-flag="sc" width="40" height="20"></svg><span>Seychelles</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="sl"><svg class="flag" data-flag="sl" width="40" height="20"></svg><span>Sierra Leone</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="so"><svg class="flag" data-flag="so" width="40" height="20"></svg><span>Somalia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="za"><svg class="flag" data-flag="za" width="40" height="20"></svg><span>South Africa</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ss"><svg class="flag" data-flag="ss" width="40" height="20"></svg><span>South Sudan</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="sd"><svg class="flag" data-flag="sd" width="40" height="20"></svg><span>Sudan</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="sz"><svg class="flag" data-flag="sz" width="40" height="20"></svg><span>Swaziland</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="tz"><svg class="flag" data-flag="tz" width="40" height="20"></svg><span>Tanzania</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="tg"><svg class="flag" data-flag="tg" width="40" height="20"></svg><span>Togo</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="tn"><svg class="flag" data-flag="tn" width="40" height="20"></svg><span>Tunisia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ug"><svg class="flag" data-flag="ug" width="40" height="20"></svg><span>Uganda</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="zm"><svg class="flag" data-flag="zm" width="40" height="20"></svg><span>Zambia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="zw"><svg class="flag" data-flag="zw" width="40" height="20"></svg><span>Zimbabwe</span></button>
+				</div>
+			 </div>
+			 </div>
+			 <div class="panel panel-default">
+			  <div class="panel-heading">
+			  <button class="btn btn-xs pull-right all">Select all</button>
+			  <button class="btn btn-xs pull-right none">Select none</button>
+			    <h3 class="panel-title">Oceania</h3>
+			  </div>
+			  <div class="panel-body row">
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="as"><svg class="flag" data-flag="as" width="40" height="20"></svg><span>American Samoa</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="au"><svg class="flag" data-flag="au" width="40" height="20"></svg><span>Australia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="sb"><svg class="flag" data-flag="sb" width="40" height="20"></svg><span>Solomon Islands</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ck"><svg class="flag" data-flag="ck" width="40" height="20"></svg><span>Cook Islands</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="fj"><svg class="flag" data-flag="fj" width="40" height="20"></svg><span>Fiji</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="pf"><svg class="flag" data-flag="pf" width="40" height="20"></svg><span>French Polynesia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ki"><svg class="flag" data-flag="ki" width="40" height="20"></svg><span>Kiribati</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="gu"><svg class="flag" data-flag="gu" width="40" height="20"></svg><span>Guam</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="nr"><svg class="flag" data-flag="nr" width="40" height="20"></svg><span>Nauru</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="nc"><svg class="flag" data-flag="nc" width="40" height="20"></svg><span>New Caledonia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="vu"><svg class="flag" data-flag="vu" width="40" height="20"></svg><span>Vanuatu</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="nz"><svg class="flag" data-flag="nz" width="40" height="20"></svg><span>New Zealand</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="nu"><svg class="flag" data-flag="nu" width="40" height="20"></svg><span>Niue</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="nf"><svg class="flag" data-flag="nf" width="40" height="20"></svg><span>Norfolk Island</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="mp"><svg class="flag" data-flag="mp" width="40" height="20"></svg><span>Northern Mariana Islands</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="um"><svg class="flag" data-flag="um" width="40" height="20"></svg><span>United States Minor Outlying Islands</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="fm"><svg class="flag" data-flag="fm" width="40" height="20"></svg><span>Micronesia</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="mh"><svg class="flag" data-flag="mh" width="40" height="20"></svg><span>Marshall Islands</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="pw"><svg class="flag" data-flag="pw" width="40" height="20"></svg><span>Palau</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="pg"><svg class="flag" data-flag="pg" width="40" height="20"></svg><span>Papua New Guinea</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="pn"><svg class="flag" data-flag="pn" width="40" height="20"></svg><span>Pitcairn Islands</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="tk"><svg class="flag" data-flag="tk" width="40" height="20"></svg><span>Tokelau</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="to"><svg class="flag" data-flag="to" width="40" height="20"></svg><span>Tonga</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="tv"><svg class="flag" data-flag="tv" width="40" height="20"></svg><span>Tuvalu</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="wf"><svg class="flag" data-flag="wf" width="40" height="20"></svg><span>Wallis and Futuna</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="ws"><svg class="flag" data-flag="ws" width="40" height="20"></svg><span>Samoa</span></button>
+				</div>
+			 </div>
+			</div>
+			 <div class="panel panel-default">
+			  <div class="panel-heading">
+			  <button class="btn btn-xs pull-right all">Select all</button>
+			  <button class="btn btn-xs pull-right none">Select none</button>
+			    <h3 class="panel-title">Other</h3>
+			  </div>
+			  <div class="panel-body row">
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="eu"><svg class="flag" data-flag="eu" width="40" height="20"></svg><span>Europe</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="un"><svg class="flag" data-flag="un" width="40" height="20"></svg><span>United Nations</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="og"><svg class="flag" data-flag="og" width="40" height="20"></svg><span>Olympic Games</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="bc"><svg class="flag" data-flag="bc" width="40" height="20"></svg><span>Basque Country</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="en"><svg class="flag" data-flag="en" width="40" height="20"></svg><span>England</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="pc"><svg class="flag" data-flag="pc" width="40" height="20"></svg><span>Scotland</span></button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				      <button class="btn btn-default btn-block"><input type="checkbox" name="lang[]" value="wa"><svg class="flag" data-flag="wa" width="40" height="20"></svg><span>Wales</span></button>
+				</div>
+			 </div>
+			</div>
+			<button class="btn global all">Select all</button>
+			<button class="btn btn-primary btn-lg submit">Download custom flags</button>
+			<button class="btn push-right compilator">Compilator</button>
+		</form>
+		<h2 id="contact-me">Contact me</h2>
+		<p>To suggest any improvements or report errors, do not hesitate to contact me at: <a href="mailto:bmoulia@gmail.com">bmoulia@gmail.com</a>.</p>
+		<p>This tool was created by Bastien Moulia with the help of Cedric Garbay.</p>
+		<p>You like flagSVG.js, you can <button class="btn btn-info buy-coffee"><span class="glyphicons coffee"></span>Buy me a coffee (2&euro;)</button> or <button class="btn btn-info buy-beer"><span class="glyphicons beer"></span>Buy me a beer (5&euro;)</button></p>
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="form-paypal">
+			<input type="hidden" name="charset" value="utf-8">
+	  		<input type="hidden" name="cmd" value="_xclick">
+			<input type="hidden" name="business" value="bmoulia@gmail.com">
+			<input type="hidden" name="lc" value="FR">
+			<input type="hidden" name="currency_code" value="EUR">
+			<input type="hidden" name="item_name" value="A coffee for flagSVG.js programmers">
+			<input type="hidden" name="amount" value="2">
+			<input type="hidden" name="quantity" value="1">
+	  	</form>
+  	</div>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/flagSVG.js"></script>
+    <script src="js/filesaver.js"></script>
+    <script src="js/compilator.js"></script>
+	<script>
+		$(document).ready(function() {
+			flag(".flag");
+			flag(".flag-exemple");
+		});
+		$(".submit").on("click", function(e){
+			e.preventDefault();
+			$.post("bddphp.php", $( "#form input" ).serialize())
+				.done(function( data ) {
+					var file = [data];
+					var blob = new Blob(file, {type : 'application/javascript'});
+					saveAs(blob, "flagSVG-custom.js");
+				});
+		});
+		$(".compilator").on("click", function(e){
+			e.preventDefault();
+			//console.log(compileSVG());
+			var file = [compileSVG()];
+			var blob = new Blob(file, {type : 'application/javascript'});
+			saveAs(blob, "flagSVG-custom.js");
+		});
+		$(".change-exemple").on("change",function(){
+			$(".flag-exemple").data("flag", $("select.change-exemple").val());
+			$(".flag-exemple").html("");
+			if($("input[value='normal']").is(":checked")){
+				flag(".flag-exemple");
+				$(".flag-exemple").attr("width","400");
+				$(".flag-exemple").css("border-radius","0");
+			}else{
+				flag(".flag-exemple", "rounded");
+				$(".flag-exemple").attr("width","200");
+				$(".flag-exemple").css("border-radius","50%");
+			}
+		});
+		$(".panel-body").on("click", ".btn", function(e){
+			e.preventDefault();
+			if($(this).children("input").is(':checked') || $(this).children("input").attr('checked') == "checked"){
+				$(this).children("input").attr('checked', false);
+				$(this).removeClass("btn-primary");
+				$(this).addClass("btn-default");
+			}else{
+				$(this).children("input").attr('checked', true);
+				$(this).removeClass("btn-default");
+				$(this).addClass("btn-primary");
+			}
+		});
+		$(".panel-heading").on("click", ".btn", function(e){
+			e.preventDefault();
+			if($(this).hasClass("none")){
+				$(this).closest(".panel").find("input").attr('checked', false);
+				$(this).closest(".panel").find(".panel-body .btn").removeClass("btn-primary");
+				$(this).closest(".panel").find(".panel-body .btn").addClass("btn-default");
+			}
+			if($(this).hasClass("all")){
+				$(this).closest(".panel").find("input").attr('checked', true);
+				$(this).closest(".panel").find(".panel-body .btn").removeClass("btn-default");
+				$(this).closest(".panel").find(".panel-body .btn").addClass("btn-primary");
+			}
+		});
+		$(".global").on("click", function(e){
+			e.preventDefault();
+			if($(this).hasClass("none")){
+				$(".panel input").attr('checked', false);
+				$(".panel-body .btn").removeClass("btn-primary");
+				$(".panel-body .btn").addClass("btn-default");
+			}
+			if($(this).hasClass("all")){
+				$(".panel input").attr('checked', true);
+				$(".panel-body .btn").removeClass("btn-default");
+				$(".panel-body .btn").addClass("btn-primary");
+			}
+		});
+
+		var shiftWindow = function() { scrollBy(0, -70) };
+		window.addEventListener("hashchange", shiftWindow);
+		
+		$(".buy-beer").on("click", function(){
+			$("#form-paypal input[name='item_name']").attr("value","A beer for flagSVG.js programmers");
+			$("#form-paypal input[name='amount']").attr("value","5");
+			$("#form-paypal").submit(); 
+		});
+		$(".buy-coffee").on("click", function(){
+			$("#form-paypal input[name='item_name']").attr("value","A coffee for flagSVG.js programmers");
+			$("#form-paypal input[name='amount']").attr("value","2");
+			$("#form-paypal").submit(); 
+		});
+	</script>
+  </body>
+</html>
