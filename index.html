@@ -358,7 +358,7 @@
   		<svg class="flag-exemple" data-flag="af" width="400" height="200"></svg>
   		<h2 id="how-to-use-it">How to use it?</h2>
   		<p>Download the file containing all the flags, or create your own file with the flags needed.</p>
-  		<a class="btn btn-primary btn-lg" href="flagSVG.js" download="flagSVG.js">Download all flags</a>
+  		<a class="btn btn-primary btn-lg" href="js/flagSVG.js" download="flagSVG.js">Download all flags</a>
   		<p>Include this code in your page:</p>
   		<pre class="pre-scrollable">&lt;svg class=&quot;flag&quot; data-flag=&quot;us&quot; width=&quot;400&quot; height=&quot;200&quot;&gt;&lt;/svg&gt;</pre>
   		<p>Edit the data-flag attribute to specify the flag code.</p>
@@ -374,10 +374,10 @@
 		<h2 id="help-us">Help us</h2>
 		<p>To participate in the development of flagSVG.js you can:</p>
 		<p>Improve flags in SVG format from <a href="https://commons.wikimedia.org" target="_blank">Wikimedia Commons</a>.</p>
-		<p>Modify the code and the algorithm for generating the JS file on GitHub.</p>
+		<p>Modify the code and the algorithm for generating the JS file on <a href="https://github.com/Bast64/flagSVG.js" target="_blank">GitHub</a>.</p>
   		<h2 id="compilator">Compilator</h2>
   		<p>Select the flag you need !</p>
-  		<form role="form" id="form" method="post" action="flagSVG-custom.js">
+  		<form role="form" id="form">
   			<div class="panel panel-default">
 			  <div class="panel-heading">
 			  <button class="btn btn-xs pull-right all">Select all</button>
@@ -1190,8 +1190,7 @@
 			 </div>
 			</div>
 			<button class="btn global all">Select all</button>
-			<button class="btn btn-primary btn-lg submit">Download custom flags</button>
-			<button class="btn push-right compilator">Compilator</button>
+			<button class="btn btn-primary btn-lg compilator">Download custom flags</button>
 		</form>
 		<h2 id="contact-me">Contact me</h2>
 		<p>To suggest any improvements or report errors, do not hesitate to contact me at: <a href="mailto:bmoulia@gmail.com">bmoulia@gmail.com</a>.</p>
@@ -1218,21 +1217,11 @@
 			flag(".flag");
 			flag(".flag-exemple");
 		});
-		$(".submit").on("click", function(e){
-			e.preventDefault();
-			$.post("bddphp.php", $( "#form input" ).serialize())
-				.done(function( data ) {
-					var file = [data];
-					var blob = new Blob(file, {type : 'application/javascript'});
-					saveAs(blob, "flagSVG-custom.js");
-				});
-		});
 		$(".compilator").on("click", function(e){
 			e.preventDefault();
-			//console.log(compileSVG());
 			var file = [compileSVG()];
 			var blob = new Blob(file, {type : 'application/javascript'});
-			saveAs(blob, "flagSVG-custom.js");
+			saveAs(blob, "flagSVG.js");
 		});
 		$(".change-exemple").on("change",function(){
 			$(".flag-exemple").data("flag", $("select.change-exemple").val());
